@@ -19,6 +19,23 @@
     left:10%;
     overflow: hidden;
 }
+.hall_name
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 47%;
+    margin-top: 200px;
+}
+.hall{
+    font-size: 50px;
+    color: white;
+}
+.uni{
+    font-size: 30px;
+    color: white;
+}
 .btn{
     position: relative;
     display: flex;

@@ -3,15 +3,24 @@ import Navbar from "./components/Navbar";
 import style from "../src/css/Home.module.css";
 import img1 from "./images/img1.jpg";
 import img2 from "./images/img2.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const toApplication = () => {
+    navigate("/application");
+  };
   return (
     <div>
       <img className={style.img1} src={img1} alt="shahporan hall" srcset="" />
       <Navbar />
       <img className={style.img2} src={img2} alt="shahporan hall" srcset="" />
+      <div className={style.hall_name}>
+        <div className={style.hall}>Shahparan Hall</div>
+        <div className={style.uni}>Sust</div>
+      </div>
       <div className={style.btn}>
-        <button>Apply now</button>
+        <button onClick={toApplication} >Apply now</button>
         <button>Log In</button>
       </div>
       <div className={style.about}>
