@@ -8,15 +8,21 @@ import LogIn from "../src/pages/LogIn"
 import IssueList from "./pages/issueList/IssueList";
 function App() {
   return (
+       <>
+
+
       <BrowserRouter>
+        <Navbar />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="application" element={<Application />} />
-          <Route path="login" element={<LogIn />} />
           <Route path="/issue" element={<Issue />} />
+          <Route path="login" element={<LogIn />} />
           <Route path="/issue_list" element={<IssueList />} />
         </Routes>
       </BrowserRouter>
+    </>
   );
 }
 
