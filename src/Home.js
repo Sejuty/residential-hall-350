@@ -1,5 +1,5 @@
 import React from "react";
- import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import style from "../src/css/Home.module.css";
 import img1 from "./images/img1.jpg";
 import img2 from "./images/img2.jpg";
@@ -54,7 +54,7 @@ const Home = () => {
         </div>
       </div>
       <div className={style.facilities}>
-        <div className={style.facilities_title}>Facilities</div>
+        <div className={`${style.facilities_title} center`}>Facilities</div>
         <div className={style.facilities_des}>
           <div className={style.in_room}>
             <h2>In-room Amenities</h2>
@@ -92,7 +92,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={style.gallery_title}>Gallery</div>
+      <div className={`${style.gallery_title} center`}>Gallery</div>
       <div className={style.gallery}>
         <img src={img1} alt="shahporan hall" srcset="" />
         <img src={img2} alt="shahporan hall" srcset="" />
