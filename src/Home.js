@@ -1,5 +1,5 @@
 import React from "react";
-// import Navbar from "./components/Navbar";
+ import Navbar from "./components/Navbar";
 import style from "../src/css/Home.module.css";
 import img1 from "./images/img1.jpg";
 import img2 from "./images/img2.jpg";
@@ -12,7 +12,7 @@ const Home = () => {
   };
   return (
     <div>
-
+      <Navbar />
       <div className={style.img1} >
         <img className={style.img2} src={img2} alt="shahporan hall" srcset="" />
         <div className={style.hall_name}>
