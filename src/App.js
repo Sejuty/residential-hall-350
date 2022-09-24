@@ -1,14 +1,14 @@
-import Home from "./Home";
+import Home from "./pages/home/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Application from "./Application"
+import Application from "./pages/application/Application"
 import './assets/css/global.css';
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import Issue from "./pages/issue/Issue";
-import LogIn from "../src/pages/LogIn"
+import LogIn from "./pages/login/LogIn"
 import IssueList from "./pages/issueList/IssueList";
 function App() {
   return (
-       <>
+    <>
 
 
       <BrowserRouter>
