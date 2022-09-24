@@ -9,6 +9,8 @@
     padding: 0;
 }
 
+
+
 button {
     margin: 30px;
     padding: 15px 35px;
@@ -36,17 +38,12 @@ nav {
 nav a {
     position: relative;
     text-decoration: none;
-    color: rgb(92, 93, 97);
+    color: rgba(219, 219, 219, 0.76);
     margin: 0px 30px;
     font-size: 20px;
 }
 
-/* .main_nav ul li {
-    margin: 0 50px;
-    list-style: none;
-    font-weight: 500;
-    cursor: pointer;
-  } */
+
 a:after {
     content: "";
     position: absolute;

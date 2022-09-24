@@ -10,6 +10,9 @@ const Home = () => {
   const toApplication = () => {
     navigate("/application");
   };
+  const toLogIn = () => {
+    navigate("/login");
+  };
   return (
     <div>
       <Navbar />
@@ -21,7 +24,7 @@ const Home = () => {
         </div>
         <div className={style.btn}>
           <button onClick={toApplication} >Apply now</button>
-          <button>Log In</button>
+          <button onClick={toLogIn}>Log In</button>
         </div>
       </div>
       <div className={style.about}>
