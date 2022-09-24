@@ -14,8 +14,7 @@ nav {
 nav a {
   position: relative;
   text-decoration: none;
-
-  color: rgb(156, 156, 156);
+  color: white;
   margin: 0px 30px;
   font-size: 20px;
 }

@@ -36,7 +36,7 @@ nav {
 nav a {
     position: relative;
     text-decoration: none;
-    color: rgba(80, 64, 64, 0.63);
+    color: rgb(92, 93, 97);
     margin: 0px 30px;
     font-size: 20px;
 }
@@ -63,6 +63,6 @@ a:hover::after {
 }
 
 a:hover {
-    color: black;
+    color: white;
     transition: 0.3s;
 }

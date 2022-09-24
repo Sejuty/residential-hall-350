@@ -9,7 +9,7 @@
     background-image: linear-gradient(to bottom, var(--header-top-color), var(--header-bottom-color)), url(https://upload.wikimedia.org/wikipedia/commons/6/69/Sust_shahporanhall.jpg);
     background-position: center;
     background-size: cover;
-    height: 65vh;
+    height: 85vh;
     width: 100%;
     top: 0;
     overflow: hidden;
