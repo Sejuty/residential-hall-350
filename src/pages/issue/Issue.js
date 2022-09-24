@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './issue.module.css'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Issue(props) {
     const location = useLocation()
@@ -14,7 +14,7 @@ export default function Issue(props) {
         <div className={`${styles.form_body}`}>
             <div>
                 <h1 >{forWhat}</h1>
-                {forWhat === 'Issue' && <a href="/issue_list">Current {forWhat}</a>}
+                {forWhat === 'Issue' && <Link to="/issue_list">Current {forWhat}</Link>}
             </div>
             <form className={styles.form}>
                 <div >
