@@ -5,18 +5,14 @@ import './assets/css/global.css';
 import Navbar from "./components/Navbar";
 function App() {
   return (
-    <>
+    // issue merge kor
 
-      <Navbar />
-      <BrowserRouter>
-
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="application" element={<Application />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="application" element={<Application />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
