@@ -100,7 +100,7 @@ button:hover {
     font-size: 30px;
     padding: 30px;
     text-decoration: underline #DE840A;
-    margin-left: 500px;
+    /* margin-left: 500px; */
 }
 
 .facilities_des {
@@ -135,6 +135,4 @@ button:hover {
     border-radius: 15px;
 }
 
-.gallery_title {
-    margin-left: 600px;
-}
+.gallery_title {}
