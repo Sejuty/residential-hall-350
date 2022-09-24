@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import style from "../src/css/Home.module.css";
-import img1 from "./images/img1.jpg";
-import img2 from "./images/img2.jpg";
+import Navbar from "../../components/navbar/Navbar";
+import style from "./Home.module.css";
+import img1 from "../../assets/images/img1.jpg";
+import img2 from "../../assets/images/img2.jpg";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <div className={style.img1} >
+      <div className={style.header_background} >
         <img className={style.img2} src={img2} alt="shahporan hall" srcset="" />
         <div className={style.hall_name}>
           <div className={style.hall}>Shahparan Hall</div>

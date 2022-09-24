@@ -6,14 +6,15 @@
 .container {
     background-color: #f4f7f8;
     width: 55vw;
-    height: 185vh;
+
     margin: auto;
     margin-top: 90px;
     margin-bottom: 40px;
     border-radius: 15px;
     box-shadow: 5px 10px #88888859
 }
-h1{
+
+h1 {
     margin: 0 0 30px 0;
     text-align: center;
     padding: 15px;
@@ -27,50 +28,56 @@ form {
     flex-wrap: nowrap;
     align-content: center;
 }
-input,select{
-  background: rgba(255,255,255,0.1);
-  border: none;
-  font-size: 15px;
-  height: auto;
-  margin: 0;
-  outline: 0;
-  padding: 15px;
-  background-color: #e8eeef;
-  color: rgb(48, 48, 49);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  margin-bottom: 30px;
-  border-radius: 10px;
+
+input,
+select {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 15px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    background-color: #e8eeef;
+    color: rgb(48, 48, 49);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+    border-radius: 10px;
 }
 
 div label {
     margin-right: 15px;
     font-size: 18px;
 }
-h3{
+
+h3 {
     margin-bottom: 20px;
     font-weight: 600;
 }
-div select{
+
+div select {
     margin-right: 10px;
 }
-.perm_add{
+
+.perm_add {
     display: flex;
     flex-wrap: wrap;
 }
-.perm_add div label{
-    margin-left:10px; 
+
+.perm_add div label {
+    margin-left: 10px;
 }
-.submit{
+
+.submit {
     width: fit-content;
     margin: auto;
     padding: 15px 35px;
     cursor: pointer;
-    background-color:#DE840A ;
+    background-color: #DE840A;
     color: white;
 }
 
-.submit:hover{
+.submit:hover {
     background-color: rgb(57, 141, 57);
     transition: ease-in 0.3s;
 }
-

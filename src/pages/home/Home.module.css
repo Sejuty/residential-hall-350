@@ -3,13 +3,13 @@
     padding: 0;
 }
 
-.img1 {
+.header_background {
     padding: 0;
     margin: 0;
     background-image: linear-gradient(to bottom, var(--header-top-color), var(--header-bottom-color)), url(https://upload.wikimedia.org/wikipedia/commons/6/69/Sust_shahporanhall.jpg);
     background-position: center;
     background-size: cover;
-    height: 85vh;
+    height: 65vh;
     width: 100%;
     top: 0;
     overflow: hidden;
@@ -21,7 +21,7 @@
     width: 402px;
     height: 500px;
     border-radius: 10px;
-    top: 35%;
+    top: 35vh;
     left: 10%;
     overflow: hidden;
 }

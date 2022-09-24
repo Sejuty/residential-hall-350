@@ -1,12 +1,12 @@
 import React from "react";
-import style from "../css/LogIn.module.css";
+import style from "./LogIn.module.css";
 import { useNavigate } from "react-router-dom";
 
 const LogIn = () => {
-    const navigate = useNavigate();
-    const toHome = () => {
-        navigate("/");
-      };
+  const navigate = useNavigate();
+  const toHome = () => {
+    navigate("/");
+  };
 
   return (
     <div>
