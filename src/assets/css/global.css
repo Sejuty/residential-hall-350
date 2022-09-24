@@ -26,7 +26,7 @@ button:hover {
     background-color: #DE840A;
 }
 
-nav {
+/* nav {
     display: flex;
     margin-top: 30px;
     justify-content: flex-end;
@@ -39,7 +39,7 @@ nav a {
     color: rgb(92, 93, 97);
     margin: 0px 30px;
     font-size: 20px;
-}
+} */
 
 /* .main_nav ul li {
     margin: 0 50px;
