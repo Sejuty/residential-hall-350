@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../components/navbar/Navbar";
+
 import style from "./Home.module.css";
 import img1 from "../../assets/images/img1.jpg";
 import img2 from "../../assets/images/img2.jpg";
@@ -15,9 +15,9 @@ const Home = () => {
   };
   return (
     <div>
-      <Navbar />
+
       <div className={style.header_background} >
-        <img className={style.img2} src={img2} alt="shahporan hall" srcset="" />
+        <div><img className={style.img2} src={img2} alt="shahporan hall" srcset="" /></div>
         <div className={style.hall_name}>
           <div className={style.hall}>Shahparan Hall</div>
           <a className={style.uni} href="https://www.sust.edu/">Shahjalal University of Science and Technology
@@ -28,7 +28,13 @@ const Home = () => {
           <button onClick={toLogIn}>Log In</button>
         </div>
       </div>
-      <div className={style.about}>
+
+      <div className={style.marquee}>
+        <div>Notice Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis delectus, voluptatibus saepe doloremque repudiandae accusantium, voluptatem corrupti neque provident eaque, tempora mollitia ducimus distinctio sed vel minus dicta blanditiis excepturi!</div>
+
+      </div>
+
+      <div className={style.about} id="about">
         <div className={style.about_title}>About</div>
         <div className={style.about_des}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
@@ -57,7 +63,7 @@ const Home = () => {
         </div>
       </div>
       <div className={style.facilities}>
-        <div className={`${style.facilities_title} center`}>Facilities</div>
+        <div className={`${style.facilities_title} center`} id="facilities">Facilities</div>
         <div className={style.facilities_des}>
           <div className={style.in_room}>
             <h2>In-room Amenities</h2>
@@ -95,12 +101,159 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={`${style.gallery_title} center`}>Gallery</div>
+      <div className={`${style.gallery_title} center`} id="gallery">Gallery</div>
       <div className={style.gallery}>
         <img src={img1} alt="shahporan hall" srcset="" />
         <img src={img2} alt="shahporan hall" srcset="" />
         <img src={img1} alt="shahporan hall" srcset="" />
       </div>
+      <div className="department-overview department-faculty">
+        <h2 id="mobile-dept-title" className={`${style.gallery_title} center`}>Offices</h2>
+        <h2 className={`${style.gallery_title} center`}>Shah Paran Hall</h2>
+        <ul id="og-grid" className={style.og_grid}>
+          <li className="odd first-child">
+            <a href="/details" data-largesrc="images/staff/large/" data-title="Dr Mohammad Mizanur Rahman Khan" data-designation="Provost" data-description="<h3 className=contact-info-h3>Contact Information:</h3>
+												<ul className=contact-info-ul>
+													<li>Phone: 01712537886</li>
+												</ul>">
+              <div className="staff-thumb">
+                <img src="https://www.sust.edu/uploads/profile-images/other-office-1579416152.jpg" className="img-responsive" alt="" />
+                <span><i></i></span>
+              </div>
+              <h4>Dr Mohammad Mizanur Rahman Khan <span className="designation">Provost</span></h4>
+            </a>
+          </li><li className="even">
+            <a href="/details" data-largesrc="images/staff/large/" data-title="Mr. Kawshik Saha" data-designation="Assistant Provost" data-description="<h3 className=contact-info-h3>Contact Information:</h3>
+												<ul className=contact-info-ul>
+													<li>Phone: 01712852564</li>
+												</ul>">
+              <div className="staff-thumb">
+                <img src="https://www.sust.edu/uploads/profile-images/other-office-1581912914.jpg" className="img-responsive" alt="" />
+                <span><i></i></span>
+              </div>
+              <h4>Mr. Kawshik Saha <span className="designation">Assistant Provost</span></h4>
+            </a>
+          </li><li className="odd">
+            <a href="/details" data-largesrc="images/staff/large/" data-title="Mr Ashis Kumar Banik" data-designation="Assistant Provost" data-description="<h3 className=contact-info-h3>Contact Information:</h3>
+												<ul className=contact-info-ul>
+													<li>Phone: 01739060516</li>
+												</ul>">
+              <div className="staff-thumb">
+                <img src="https://www.sust.edu/uploads/profile-images/other-office-1581913308.jpg" className="img-responsive" alt="" />
+                <span><i></i></span>
+              </div>
+              <h4>Mr Ashis Kumar Banik <span className="designation">Assistant Provost</span></h4>
+            </a>
+          </li><li className="even">
+            <a href="/details" data-largesrc="images/staff/large/" data-title="Mr Mohammad Abul Hasnat" data-designation="Assistant Provost" data-description="<h3 className=contact-info-h3>Contact Information:</h3>
+												<ul className=contact-info-ul>
+													<li>Phone: 01710525919</li>
+												</ul>">
+              <div className="staff-thumb">
+                <img src="https://www.sust.edu/uploads/profile-images/other-office-1581914076.jpg" className="img-responsive" alt="" />
+                <span><i></i></span>
+              </div>
+              <h4>Mr Mohammad Abul Hasnat <span className="designation">Assistant Provost</span></h4>
+            </a>
+          </li><li className="odd">
+            <a href="/details" data-largesrc="images/staff/large/" data-title="Md Masum Talukder" data-designation="Assistant Provost" data-description="<h3 className=contact-info-h3>Contact Information:</h3>
+												<ul className=contact-info-ul>
+													<li>Phone: 01716310110</li>
+												</ul>">
+              <div className="staff-thumb">
+                <img src="https://www.sust.edu/uploads/profile-images/other-office-1581914165.jpg" className="img-responsive" alt="" />
+                <span><i></i></span>
+              </div>
+              <h4>Md Masum Talukder <span className="designation">Assistant Provost</span></h4>
+            </a>
+          </li><li className="even">
+            <a href="/details" data-largesrc="images/staff/large/" data-title="A.S.M. Sayem" data-designation="Assistant Provost" data-description="<h3 className=contact-info-h3>Contact Information:</h3>
+												<ul className=contact-info-ul>
+													<li>Phone: 01717342080</li>
+												</ul>">
+              <div className="staff-thumb">
+                <img src="https://www.sust.edu/uploads/profile-images/other-office-1581914234.jpg" className="img-responsive" alt="" />
+                <span><i></i></span>
+              </div>
+              <h4>A.S.M. Sayem <span className="designation">Assistant Provost</span></h4>
+            </a>
+          </li><li className="odd">
+            <a href="/details" data-largesrc="images/staff/large/" data-title="Md Saifuzzaman Bhuiyan" data-designation="Assistant Provost" data-description="<h3 className=contact-info-h3>Contact Information:</h3>
+												<ul className=contact-info-ul>
+													<li>Phone: 01628598829</li>
+												</ul>">
+              <div className="staff-thumb">
+                <img src="https://www.sust.edu/uploads/profile-images/other-office-1581914544.jpg" className="img-responsive" alt="" />
+                <span><i></i></span>
+              </div>
+              <h4>Md Saifuzzaman Bhuiyan <span className="designation">Assistant Provost</span></h4>
+            </a>
+          </li><li className="even">
+            <a href="/details" data-largesrc="images/staff/large/" data-title="Asif Mohammed Samir" data-designation="Assistant Provost" data-description="<h3 className=contact-info-h3>Contact Information:</h3>
+												<ul className=contact-info-ul>
+													<li>Phone: 01718168496</li>
+												</ul>">
+              <div className="staff-thumb">
+                <img src="https://www.sust.edu/uploads/profile-images/other-office-1581914583.jpg" className="img-responsive" alt="" />
+                <span><i></i></span>
+              </div>
+              <h4>Asif Mohammed Samir <span className="designation">Assistant Provost</span></h4>
+            </a>
+          </li><li className="odd">
+            <a href="/details" data-largesrc="images/staff/large/" data-title="Md Mahadi Hasan Nahid" data-designation="Assistant Provost" data-description="<h3 className=contact-info-h3>Contact Information:</h3>
+												<ul className=contact-info-ul>
+													<li>Phone: 01738150127</li>
+												</ul>">
+              <div className="staff-thumb">
+                <img src="https://www.sust.edu/uploads/profile-images/other-office-1581914663.jpg" className="img-responsive" alt="" />
+                <span><i></i></span>
+              </div>
+              <h4>Md Mahadi Hasan Nahid <span className="designation">Assistant Provost</span></h4>
+            </a>
+          </li><li className="even">
+            <a href="/details" data-largesrc="images/staff/large/" data-title="Amit Kumar Chakraborty" data-designation="Assistant Provost" data-description="<h3 className=contact-info-h3>Contact Information:</h3>
+												<ul className=contact-info-ul>
+													<li>Phone: 01713936851</li>
+												</ul>">
+              <div className="staff-thumb">
+                <img src="https://www.sust.edu/uploads/profile-images/other-office-1581914740.jpg" className="img-responsive" alt="" />
+                <span><i></i></span>
+              </div>
+              <h4>Amit Kumar Chakraborty <span className="designation">Assistant Provost</span></h4>
+            </a>
+          </li><li className="odd">
+            <a href="/details" data-largesrc="images/staff/large/" data-title="Mr Md Amirul Haque Chy" data-designation="Administrative Officer" data-description="<h3 className=contact-info-h3>Contact Information:</h3>
+												<ul className=contact-info-ul>
+													<li>Phone: 01716253577</li>
+												</ul>">
+              <div className="staff-thumb">
+                <img src="https://www.sust.edu/uploads/profile-images/other-office-1461470159.jpg" className="img-responsive" alt="" />
+                <span><i></i></span>
+              </div>
+              <h4>Mr Md Amirul Haque Chy <span className="designation">Administrative Officer</span></h4>
+            </a>
+          </li><li className="even last-child">
+            <a href="/details" data-largesrc="images/staff/large/" data-title="Mr Md Anwarul Hoque" data-designation="Imam" data-description="<h3 className=contact-info-h3>Contact Information:</h3>
+												<ul className=contact-info-ul>
+													<li>Phone: 01738768628</li>
+												</ul>">
+              <div className="staff-thumb">
+                <img src="https://www.sust.edu/uploads/profile-images/thumb.jpg" className="img-responsive" alt="" />
+                <span><i></i></span>
+              </div>
+              <h4>Mr Md Anwarul Hoque <span className="designation">Imam</span></h4>
+            </a>
+          </li>
+        </ul>
+        <div className={style.footer}>
+          <h2>Contact</h2>
+          <div className="contact_address_container">
+            <ul>
+              <li className="odd first-child"><strong>Shahjalal University of Science and Technology</strong></li><li className="even last-child">Shahjalal University of Science and Technology, Sylhet-3114, Bangladesh.</li>								</ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };

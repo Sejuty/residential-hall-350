@@ -9,10 +9,11 @@ const Navbar = () => {
     <div className={styles.nav_wrap}>
       <nav className={styles.main_nav}>
         <Link to="/">Home</Link>
-        <Link to="#About">About</Link>
-        <Link to="#Facilities">Facilities</Link>
-        <Link to="#Gallery">Gallery</Link>
-        <Link to="/issue">Issue</Link>
+        <a href="#about">About</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#gallery">Gallery</a>
+        <Link to="/issue" state={{ forWhat: "Issue" }}>Issue</Link>
+        <Link to="/issue" state={{ forWhat: "Payment" }}>Payment</Link>
       </nav>
     </div>
 

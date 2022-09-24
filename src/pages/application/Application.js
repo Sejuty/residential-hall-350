@@ -5,7 +5,7 @@ const Application = () => {
   return (
     <div>
       <form className={style.container}>
-        <h1>Application</h1>
+        <h1 className={style.h1}>Application</h1>
         <div className={style.perm_add}>
           {" "}
           <div>
