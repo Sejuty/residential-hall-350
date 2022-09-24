@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import style from "../src/css/Home.module.css";
 import img1 from "./images/img1.jpg";
 import img2 from "./images/img2.jpg";
@@ -12,16 +12,17 @@ const Home = () => {
   };
   return (
     <div>
-      <img className={style.img1} src={img1} alt="shahporan hall" srcset="" />
-      <Navbar />
-      <img className={style.img2} src={img2} alt="shahporan hall" srcset="" />
-      <div className={style.hall_name}>
-        <div className={style.hall}>Shahparan Hall</div>
-        <div className={style.uni}>Sust</div>
-      </div>
-      <div className={style.btn}>
-        <button onClick={toApplication} >Apply now</button>
-        <button>Log In</button>
+
+      <div className={style.img1} >
+        <img className={style.img2} src={img2} alt="shahporan hall" srcset="" />
+        <div className={style.hall_name}>
+          <div className={style.hall}>Shahparan Hall</div>
+          <div className={style.uni}>Sust</div>
+        </div>
+        <div className={style.btn}>
+          <button onClick={toApplication} >Apply now</button>
+          <button>Log In</button>
+        </div>
       </div>
       <div className={style.about}>
         <div className={style.about_title}>About</div>
@@ -54,7 +55,7 @@ const Home = () => {
       <div className={style.facilities}>
         <div className={style.facilities_title}>Facilities</div>
         <div className={style.facilities_des}>
-          <div className ={style.in_room}>
+          <div className={style.in_room}>
             <h2>In-room Amenities</h2>
             <ul>
               <li>One Bed per Student shall be offered</li>
@@ -92,9 +93,9 @@ const Home = () => {
       </div>
       <div className={style.gallery_title}>Gallery</div>
       <div className={style.gallery}>
-      <img  src={img1} alt="shahporan hall" srcset="" />
-      <img  src={img2} alt="shahporan hall" srcset="" />
-      <img  src={img1} alt="shahporan hall" srcset="" />
+        <img src={img1} alt="shahporan hall" srcset="" />
+        <img src={img2} alt="shahporan hall" srcset="" />
+        <img src={img1} alt="shahporan hall" srcset="" />
       </div>
     </div>
   );
