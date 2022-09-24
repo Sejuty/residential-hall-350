@@ -17,7 +17,8 @@ const Home = () => {
         <img className={style.img2} src={img2} alt="shahporan hall" srcset="" />
         <div className={style.hall_name}>
           <div className={style.hall}>Shahparan Hall</div>
-          <div className={style.uni}>Sust</div>
+          <a className={style.uni} href="https://www.sust.edu/">Shahjalal University of Science and Technology
+          </a>
         </div>
         <div className={style.btn}>
           <button onClick={toApplication} >Apply now</button>

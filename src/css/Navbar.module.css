@@ -1,21 +1,32 @@
 nav {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
+  border-radius: 10px;
+
+  backdrop-filter: blur(10px);
+  background-color: rgba(41, 41, 41, 0.44);
 
   display: flex;
   /* margin-top: 30px; */
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
   margin-right: 50px;
   color: rgb(107, 107, 107);
+  height: 40px;
+  transition: transform 0.3s;
 }
+
+nav:hover {
+  transform: scaleX(1.1) scaleY(1.2);
+}
+
 
 nav a {
   position: relative;
   text-decoration: none;
 
-  color: rgb(156, 156, 156);
+  color: rgb(255, 255, 255);
   margin: 0px 30px;
   font-size: 20px;
 }
@@ -26,22 +37,3 @@ nav a {
   font-weight: 500;
   cursor: pointer;
 } */
-a:after {
-  content: "";
-  position: absolute;
-  background-color: #DE840A;
-  height: 3px;
-  width: 0;
-  left: 0;
-  bottom: -7px;
-  transition: 0.3s;
-}
-
-a:hover::after {
-  width: 100%;
-}
-
-a:hover {
-  color: rgb(204, 142, 8);
-  transition: 0.3s;
-}

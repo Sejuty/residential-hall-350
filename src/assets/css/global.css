@@ -47,22 +47,21 @@ nav a {
     font-weight: 500;
     cursor: pointer;
   } */
-a:after {
-    content: "";
-    position: absolute;
-    background-color: #DE840A;
-    height: 3px;
-    width: 0;
-    left: 0;
-    bottom: -7px;
-    transition: 0.3s;
-}
-
-a:hover::after {
-    width: 100%;
+a {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    transition: background-size .3s;
+    position: relative;
+    text-decoration: none;
 }
 
 a:hover {
-    color: black;
-    transition: 0.3s;
+    background-size: 100% 2px;
+}
+
+.center {
+    display: grid;
+    place-items: center;
 }

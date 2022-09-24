@@ -2,16 +2,17 @@ import React from "react";
 import styles from "../css/Navbar.module.css"
 import { Link } from "react-router-dom";
 
+
 const Navbar = () => {
   return (
 
     <div className={styles.nav_wrap}>
       <nav className={styles.main_nav}>
-        <a href="#Home">Home</a>
-        <a href="#About">About</a>
-        <a href="#Facilities">Facilities</a>
-        <a href="#Gallery">Gallery</a>
-        <a href="/issue">Issue</a>
+        <Link to="/">Home</Link>
+        <Link to="#About">About</Link>
+        <Link to="#Facilities">Facilities</Link>
+        <Link to="#Gallery">Gallery</Link>
+        <Link to="/issue">Issue</Link>
       </nav>
     </div>
 
