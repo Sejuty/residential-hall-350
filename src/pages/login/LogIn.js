@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./LogIn.module.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LogIn = () => {
   const navigate = useNavigate();
@@ -11,6 +11,7 @@ const LogIn = () => {
   return (
     <div>
       <form className={style.container}>
+        <h1 className={style.h1}>Log In</h1>
         <div>
           <div>
             <label for="email">Email</label>
@@ -45,7 +46,9 @@ const LogIn = () => {
           <button onClick={toHome} className={`${style.submit} ${style.cancel} `}>Cancel</button>
           <button className={style.submit}>Log In</button>
         </div>
+        <p style={{ fontSize: "20px" }}>Don't have an account?<Link to="/application">Register</Link></p>
       </form>
+
     </div>
   );
 };
