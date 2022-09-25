@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './issue.module.css'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 
 export default function Issue(props) {
     const location = useLocation()
     // const { from } = location.state
     let { forWhat } = location.state;
+    console.log(forWhat)
     forWhat = forWhat || 'Issue';
 
     return (

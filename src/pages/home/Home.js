@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import style from "./Home.module.css";
 import img1 from "../../assets/images/img1.jpg";
@@ -6,6 +6,9 @@ import img2 from "../../assets/images/img2.jpg";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+  const [user, setUser] = useState(localStorage.getItem("user"));
+
   const navigate = useNavigate();
   const toApplication = () => {
     navigate("/application");
@@ -13,15 +16,30 @@ const Home = () => {
   const toLogIn = () => {
     navigate("/login");
   };
+
+  const [anime, setAnime] = useState(style.img2);
+
+
+  useEffect(() => {
+
+    setAnime(`${style.img2} ${style.img2_2}`);
+
+
+
+  }, [])
+
+
+
   return (
     <div>
 
       <div className={style.header_background} >
-        <div><img className={style.img2} src={img2} alt="shahporan hall" srcset="" /></div>
+        <div><img className={anime} src={img2} alt="shahporan hall" srcSet="" /></div>
         <div className={style.hall_name}>
           <div className={style.hall}>Shahparan Hall</div>
           <a className={style.uni} href="https://www.sust.edu/">Shahjalal University of Science and Technology
           </a>
+          <h4 className={style.log}>Logged In As {user}</h4>
         </div>
         <div className={style.btn}>
           <button onClick={toApplication} >Apply now</button>
@@ -103,9 +121,9 @@ const Home = () => {
       </div>
       <div className={`${style.gallery_title} center`} id="gallery">Gallery</div>
       <div className={style.gallery}>
-        <img src={img1} alt="shahporan hall" srcset="" />
-        <img src={img2} alt="shahporan hall" srcset="" />
-        <img src={img1} alt="shahporan hall" srcset="" />
+        <img src={img1} alt="shahporan hall" srcSet="" />
+        <img src={img2} alt="shahporan hall" srcSet="" />
+        <img src={img1} alt="shahporan hall" srcSet="" />
       </div>
       <div className="department-overview department-faculty">
         <h2 id="mobile-dept-title" className={`${style.gallery_title} center`}>Offices</h2>
