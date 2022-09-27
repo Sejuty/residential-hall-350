@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 import style from "./Home.module.css";
-import img1 from "../../assets/images/img1.jpg";
+
 import img2 from "../../assets/images/img2.jpg";
 import { useNavigate } from "react-router-dom";
-import Silde from "../../components/slider/Silde";
-import {SliderData} from "../../components/slider/SliderData";
+import Silde from "../../components/slider/Slider";
+import { SliderData } from "../../components/slider/SliderData";
 
 
 const Home = () => {
@@ -128,8 +128,8 @@ const Home = () => {
         <img src={img2} alt="shahporan hall" srcSet="" />
         <img src={img1} alt="shahporan hall" srcSet="" />
       </div> */}
-    <div className={style.slider}><Silde slides={SliderData}/></div>
-      
+      <div className={style.slider}><Silde slides={SliderData} /></div>
+
       <div className="department-overview department-faculty">
         <h2 id="mobile-dept-title" className={`${style.gallery_title} center`}>Offices</h2>
         <h2 className={`${style.gallery_title} center`}>Shah Paran Hall</h2>

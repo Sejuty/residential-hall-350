@@ -20,6 +20,22 @@ nav {
   padding: 5px 10px;
 }
 
+@media screen and (max-width: 750px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    margin-right: 5px;
+
+  }
+
+  nav a {
+    padding: 10px 0px;
+
+  }
+
+}
+
+
 nav:hover {
   transform: scaleX(1.1) scaleY(1.2);
 }
