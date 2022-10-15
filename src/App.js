@@ -22,17 +22,31 @@ function App() {
 
 
       <UserProvider>
-        <HashRouter>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="application" element={<Application />} />
-            <Route path="/issue" element={<Issue />} />
-            <Route path="login" element={<LogIn />} />
-            <Route path="/issue_list" element={<IssueList />} />
-          </Routes>
-          <Footer />
-        </HashRouter>
+
+        <Navbar />
+        <Routes>
+          {/* public */}
+          <Route path="/" element={<Home />} />
+          <Route path="login" element={<LogIn />} />
+          {/* sign up page */}
+          {/* private students*/}
+          <Route path="application" element={<Application />} />
+          <Route path="/issue" element={<Issue />} />
+          {/* Payment page */}
+
+          {/* private authority */}
+          <Route path="/issue_list" element={<IssueList />} />
+          {/* payment approve page */}
+          {/* notice page */}
+          {/* room details page and edit page */}
+
+
+          {/* private department_head */}
+          {/* application list for approve by dept head */}
+
+        </Routes>
+        <Footer />
+
       </UserProvider>
     </>
   );

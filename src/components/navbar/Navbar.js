@@ -18,10 +18,10 @@ const Navbar = () => {
         <AnchorLink href="#about">About</AnchorLink>
         <AnchorLink href="#facilities">Facilities</AnchorLink>
         <AnchorLink href="#gallery">Gallery</AnchorLink>
-        {user === "Student" && <div>
+        {user === "Student" && < >
           <Link to="/issue" state={{ forWhat: "Issue" }}>Issue</Link>
           <Link to="/issue" state={{ forWhat: "Payment" }}>Payment</Link>
-        </div>}
+        </>}
         {user !== 'Student' && user !== "" && user != null && <Link to="/issue_list">Current Issues</Link>
         }
       </nav>
