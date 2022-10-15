@@ -79,7 +79,10 @@ button:hover {
 }
 
 .about {
-    padding: 80px;
+
+    padding: clamp(20px, 80px, 100px);
+    padding-top: 80px;
+
     margin-top: 100px;
     display: flex;
     align-content: center;
@@ -101,6 +104,7 @@ button:hover {
 
 .facilities {
     padding: 80px;
+
 }
 
 .facilities_title,
@@ -115,7 +119,7 @@ button:hover {
     display: flex;
     align-content: flex-start;
     justify-content: space-between;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .facilities_des h2 {

@@ -3,11 +3,12 @@ import styles from "./Navbar.module.css"
 import { Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { UserContext } from "../../utils/userContext";
+import useUser from "../../utils/hooks/useUser";
 
 
 const Navbar = () => {
 
-  const [user, setUser] = useContext(UserContext)
+  const [user, setUser] = useUser();
 
   return (
 

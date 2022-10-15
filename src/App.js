@@ -6,8 +6,8 @@ import Navbar from "./components/navbar/Navbar";
 import Issue from "./pages/issue/Issue";
 import LogIn from "./pages/login/LogIn"
 import IssueList from "./pages/issueList/IssueList";
-import { useState } from "react";
-import { UserContext } from "./utils/userContext";
+
+import { UserProvider } from "./utils/userContext";
 import Footer from "./components/footer/Footer";
 
 
@@ -15,13 +15,13 @@ import Footer from "./components/footer/Footer";
 
 function App() {
 
-  const [user, setUser] = useState(localStorage.getItem("user"));
+
 
   return (
     <>
 
 
-      <UserContext.Provider value={[user, setUser]}>
+      <UserProvider>
         <HashRouter>
           <Navbar />
           <Routes>
@@ -33,7 +33,7 @@ function App() {
           </Routes>
           <Footer />
         </HashRouter>
-      </UserContext.Provider>
+      </UserProvider>
     </>
   );
 }
