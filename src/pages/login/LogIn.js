@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import style from "./LogIn.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../utils/userContext";
+import useUser from "../../utils/hooks/useUser";
 
 const LogIn = () => {
   const navigate = useNavigate();
@@ -11,8 +12,7 @@ const LogIn = () => {
 
   const [platformValue, platformInputProps] = useState("Student");
 
-  const [user, setUser] = useContext(UserContext);
-
+  const [user, setUser] = useUser();
   return (
     <div>
       <form className={style.container}>
