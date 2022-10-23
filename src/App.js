@@ -1,34 +1,33 @@
+import { Route, Routes } from "react-router-dom";
+import "./assets/css/global.css";
+import Application from "./pages/application/Application";
 import Home from "./pages/home/Home";
-import { Routes, Route, HashRouter } from "react-router-dom";
-import Application from "./pages/application/Application"
-import './assets/css/global.css';
-import Navbar from "./components/navbar/Navbar";
 import Issue from "./pages/issue/Issue";
-import LogIn from "./pages/login/LogIn"
 import IssueList from "./pages/issueList/IssueList";
-
+import LogIn from "./pages/login/LogIn";
+import StudentReg from "./pages/registration/student";
 import { UserProvider } from "./utils/userContext";
-import Footer from "./components/footer/Footer";
-
-
-
+import Navbar from "./components/navbar/Navbar"
+import ProvostReg from "./pages/registration/provost/provost";
+import AdministrationReg from "./pages/registration/administrationReg/administrationReg";
+import DeptHead from "./pages/registration/dept_head/deptHead";
+import Footer from "./components/footer/Footer"
 
 function App() {
-
-
-
-  return (
+  return ( 
     <>
-
-
       <UserProvider>
-
         <Navbar />
         <Routes>
+          
           {/* public */}
           <Route path="/" element={<Home />} />
           <Route path="login" element={<LogIn />} />
           {/* sign up page */}
+          <Route path="registration" element={<StudentReg />} />
+          <Route path="provostReg" element={<ProvostReg />} />
+          <Route path="administrationReg" element={<AdministrationReg />} />
+          <Route path="dept_headReg" element={<DeptHead />} />
           {/* private students*/}
           <Route path="application" element={<Application />} />
           <Route path="/issue" element={<Issue />} />
@@ -40,13 +39,10 @@ function App() {
           {/* notice page */}
           {/* room details page and edit page */}
 
-
           {/* private department_head */}
           {/* application list for approve by dept head */}
-
         </Routes>
         <Footer />
-
       </UserProvider>
     </>
   );

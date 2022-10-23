@@ -24,11 +24,7 @@ const Home = () => {
 
 
   useEffect(() => {
-
     setAnime(`${style.img2} ${style.img2_2}`);
-
-
-
   }, [])
 
 
