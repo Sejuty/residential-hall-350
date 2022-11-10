@@ -79,7 +79,7 @@ const AppliList = () => {
   });
   return (
     <div className={style.table_wrapper}>
-        <h2> Applicant List</h2>
+        <h2>Applicant List</h2>
       <table className = {style.fl_table}>
         <thead>
           <tr>
