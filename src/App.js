@@ -12,6 +12,7 @@ import ProvostReg from "./pages/registration/provost/provost";
 import AdministrationReg from "./pages/registration/administrationReg/administrationReg";
 import DeptHead from "./pages/registration/dept_head/deptHead";
 import Footer from "./components/footer/Footer"
+import AppliList from "./pages/application_list/appliList";
 
 function App() {
   return ( 
@@ -23,6 +24,8 @@ function App() {
           {/* public */}
           <Route path="/" element={<Home />} />
           <Route path="login" element={<LogIn />} />
+          <Route path="application-list" element={<AppliList />} />
+
           {/* sign up page */}
           <Route path="registration" element={<StudentReg />} />
           <Route path="provostReg" element={<ProvostReg />} />
