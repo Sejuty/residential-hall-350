@@ -1,8 +1,7 @@
 import React from "react";
 import style from "./appliList.module.css";
-import { FaArrowAltCircleRight} from "react-icons/fa";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-
 
 const AppliList = () => {
   const applicant = [
@@ -63,7 +62,9 @@ const AppliList = () => {
       status: "completed",
     },
   ];
+  
   const DisplayData = applicant.map((info) => {
+    console.log(info)
     return (
       <tr>
         <td>{info.name}</td>
@@ -72,15 +73,22 @@ const AppliList = () => {
         <td>{info.semester}</td>
         <td>{info.merit}</td>
         <td>
-            <Link><FaArrowAltCircleRight></FaArrowAltCircleRight></Link>
+          {/* <Link
+            to={{
+                pathname: "/room-assign",
+                state: info // your data array of objects
+              }}
+          >
+            <FaArrowAltCircleRight></FaArrowAltCircleRight>
+          </Link> */}
         </td>
       </tr>
     );
   });
   return (
     <div className={style.table_wrapper}>
-        <h2>Applicant List</h2>
-      <table className = {style.fl_table}>
+      <h2>Applicant List</h2>
+      <table className={style.fl_table}>
         <thead>
           <tr>
             <th>Name</th>
