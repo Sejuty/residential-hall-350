@@ -73,14 +73,14 @@ const AppliList = () => {
         <td>{info.semester}</td>
         <td>{info.merit}</td>
         <td>
-          {/* <Link
+          <Link
             to={{
                 pathname: "/room-assign",
                 state: info // your data array of objects
               }}
           >
             <FaArrowAltCircleRight></FaArrowAltCircleRight>
-          </Link> */}
+          </Link>
         </td>
       </tr>
     );

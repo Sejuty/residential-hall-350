@@ -14,6 +14,7 @@ import DeptHead from "./pages/registration/dept_head/deptHead";
 import Footer from "./components/footer/Footer"
 import AppliList from "./pages/application_list/appliList";
 import RoomAssign from "./pages/assign_room/RoomAssign";
+import Resident from "./pages/resident/resident";
 
 function App() {
   return ( 
@@ -42,8 +43,8 @@ function App() {
           {/* payment approve page */}
           {/* notice page */}
           {/* room details page and edit page */}
-          {/* <Route exact path="room-assign" component={AppliList} element={<RoomAssign />} /> */}
-         
+          <Route exact path="room-assign" component={AppliList} element={<RoomAssign />} />
+          <Route path="resident" element={<Resident />} />
 
           {/* private department_head */}
           {/* application list for approve by dept head */}
