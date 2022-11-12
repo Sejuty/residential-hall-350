@@ -46,6 +46,7 @@
 .fl_table thead th {
     color: #ffffff;
     background: #4FC3A1;
+    cursor: pointer;
 }
 
 

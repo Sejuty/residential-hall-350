@@ -1,70 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from '../application_list/appliList.module.css'
 import SideMenu from '../../components/sidemenu/SideMenu';
 import {FcRight} from 'react-icons/fc'
 import { Link, useNavigate } from "react-router-dom";
-
+import Applicant from "../../components/json/applicant.json"
+import useSortableData from "../../components/sortTable/useSortableData"
 const Cancelled = () => {
-  const applicant = [
-    {
-      name: "asdfghjk",
-      regNo: "2018831029",
-      dept: "Swe",
-      semester: "5th",
-      merit: 10,
-      status: "completed",
-    },
-    {
-      name: "asdfghjk",
-      regNo: "2018831011",
-      dept: "Swe",
-      semester: "5th",
-      merit: 10,
-      status: "completed",
-    },
-    {
-      name: "asdfghjk",
-      regNo: "2018831088",
-      dept: "Swe",
-      semester: "5th",
-      merit: 10,
-      status: "completed",
-    },
-    {
-      name: "asdfghjk",
-      regNo: "2018831111",
-      dept: "Swe",
-      semester: "5th",
-      merit: 10,
-      status: "completed",
-    },
-    {
-      name: "asdfghjk",
-      regNo: "2016453213",
-      dept: "Swe",
-      semester: "5th",
-      merit: 10,
-      status: "completed",
-    },
-    {
-      name: "asdfghjk",
-      regNo: "2019837468",
-      dept: "Swe",
-      semester: "5th",
-      merit: 10,
-      status: "completed",
-    },
-    {
-      name: "asdfghjk",
-      regNo: "20193746381",
-      dept: "Swe",
-      semester: "5th",
-      merit: 10,
-      status: "completed",
-    },
-  ];
-  
-  const DisplayData = applicant.map((info) => {
+  const applicant = Applicant
+  const { items, requestSort } = useSortableData(applicant);
+ 
+  const DisplayData = items.map((info) => {
     return (
       <tr>
         <td>{info.name}</td>
@@ -87,11 +32,13 @@ const Cancelled = () => {
       <table className={style.fl_table}>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>RegNo</th>
-            <th>Department</th>
-            <th>Semester</th>
-            <th>Resend</th>
+            <th onClick={()=>requestSort("name")}> 
+              Name
+            </th>
+            <th onClick={()=>requestSort("regNo")}>RegNo</th>
+            <th onClick={()=>requestSort("dept")}>Department</th>
+            <th onClick={()=>requestSort("semester")}>Semester</th>
+            <th onClick={()=>requestSort("merit")}>Resend</th>
           </tr>
         </thead>
         <tbody>{DisplayData}</tbody>

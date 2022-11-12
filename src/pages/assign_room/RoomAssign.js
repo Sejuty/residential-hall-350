@@ -3,58 +3,9 @@ import AppliList from "../application_list/appliList";
 import { Link, useNavigate,useLocation } from "react-router-dom";
 import style from "./roomassign.module.css";
 import SideMenu from "../../components/sidemenu/SideMenu";
-
+import RoomDetails from "../../components/json/room.json"
 const RoomAssign = (props) => {
-  const roomDetails = [
-    {
-      id: 1,
-      roomNo: 101,
-      block: "A",
-      floor: 1,
-      capacity: 4,
-      residintNo: 2,
-    },
-    {
-      id: 2,
-      roomNo: 201,
-      block: "B",
-      floor: 2,
-      capacity: 4,
-      residintNo: 2,
-    },
-    {
-      id: 2,
-      roomNo: 301,
-      block: "A",
-      floor: 23,
-      capacity: 4,
-      residintNo: 2,
-    },
-    {
-      id: 3,
-      roomNo: 401,
-      block: "C",
-      floor: 4,
-      capacity: 4,
-      residintNo: 2,
-    },
-    {
-      id: 4,
-      roomNo: 202,
-      block: "D",
-      floor: 2,
-      capacity: 4,
-      residintNo: 2,
-    },
-    {
-      id: 5,
-      roomNo: 102,
-      block: "A",
-      floor: 1,
-      capacity: 4,
-      residintNo: 2,
-    },
-  ]
+  const roomDetails = RoomDetails
 
   const getInitialState = () => {
     const value = 101;

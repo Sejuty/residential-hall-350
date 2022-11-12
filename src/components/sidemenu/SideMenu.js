@@ -30,6 +30,9 @@ const SideMenu = () => {
             <li>
               <Link to="/cancelled"><span className={style.item}>Cancelled Student</span></Link>
             </li>
+            <li>
+            <Link to="/issue_list"><span className={style.item}>Currents Issues</span></Link>
+            </li>
           </ul>
         </div>
       </div>

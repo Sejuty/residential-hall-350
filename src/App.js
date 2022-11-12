@@ -20,6 +20,8 @@ import Payment from "./pages/payment/payment";
 import Approval from "./pages/approval/approval";
 import Cancelled from "./pages/cancelled/Cancelled";
 import Approved from "./pages/approved/Approved";
+import CreateNote from "./pages/notes/CreateNote";
+
 function App() {
   return ( 
     <>
@@ -56,9 +58,13 @@ function App() {
           {/* private department_head */}
           <Route path="for-approval" element={<Approval />} />
           <Route path="cancelled" element={<Cancelled />} />
-          <Route path="approved" element={<Approved/>} />
+          
 
           {/* application list for approve by dept head */}
+          <Route path="approved" element={<Approved/>} />
+
+          {/*page about expenses notes and others*/}
+          <Route path="/pending/create-note" element={<CreateNote/>} />
         </Routes>
         <Footer />
       </UserProvider>

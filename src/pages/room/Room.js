@@ -1,60 +1,16 @@
 import React from 'react'
 import style from "../../pages//application_list/appliList.module.css"
 import SideMenu from '../../components/sidemenu/SideMenu.js';
+import useSortableData from "../../components/sortTable/useSortableData"
+import RoomDetails from "../../components/json/room.json"
 
 const Room = () => {
-    const roomDetails = [
-        {
-          id: 1,
-          roomNo: 101,
-          block: "A",
-          floor: 1,
-          capacity: 4,
-          residintNo: 2,
-        },
-        {
-          id: 2,
-          roomNo: 201,
-          block: "B",
-          floor: 2,
-          capacity: 4,
-          residintNo: 2,
-        },
-        {
-          id: 2,
-          roomNo: 301,
-          block: "A",
-          floor: 3,
-          capacity: 4,
-          residintNo: 2,
-        },
-        {
-          id: 3,
-          roomNo: 401,
-          block: "C",
-          floor: 4,
-          capacity: 4,
-          residintNo: 2,
-        },
-        {
-          id: 4,
-          roomNo: 202,
-          block: "D",
-          floor: 2,
-          capacity: 4,
-          residintNo: 2,
-        },
-        {
-          id: 5,
-          roomNo: 102,
-          block: "A",
-          floor: 1,
-          capacity: 4,
-          residintNo: 2,
-        },
-      ];
+    const roomDetails = RoomDetails
+
+
+      const { items, requestSort } = useSortableData(roomDetails);
       
-      const DisplayData = roomDetails.map((info) => {
+      const DisplayData = items.map((info) => {
         return (
           <tr>
             <td>{info.id}</td>
@@ -75,11 +31,11 @@ const Room = () => {
             <thead>
               <tr>
                 <th>Id</th>
-                <th>Room NO</th>
-                <th>Block</th>
-                <th>Floor</th>
-                <th>Capacity Date</th>
-                <th>Resident Number</th>
+                <th onClick={()=>requestSort("roomNo")}>Room NO</th>
+                <th onClick={()=>requestSort("block")}>Block</th>
+                <th onClick={()=>requestSort("floor")}>Floor</th>
+                <th onClick={()=>requestSort("capacity")}>Capacity</th>
+                <th onClick={()=>requestSort("residintNo")}>Resident Number</th>
               </tr>
             </thead>
             <tbody>{DisplayData}</tbody>
