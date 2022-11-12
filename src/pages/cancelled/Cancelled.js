@@ -1,10 +1,10 @@
-import React from "react";
-import style from "./appliList.module.css";
-import { FaArrowAltCircleRight } from "react-icons/fa";
+import React from 'react'
+import style from '../application_list/appliList.module.css'
+import SideMenu from '../../components/sidemenu/SideMenu';
+import {FcRight} from 'react-icons/fc'
 import { Link, useNavigate } from "react-router-dom";
-import SideMenu from "../../components/sidemenu/SideMenu";
 
-const AppliList = () => {
+const Cancelled = () => {
   const applicant = [
     {
       name: "asdfghjk",
@@ -71,12 +71,9 @@ const AppliList = () => {
         <td>{info.regNo}</td>
         <td>{info.dept}</td>
         <td>{info.semester}</td>
-        <td>{info.merit}</td>
         <td>
-          <Link
-             to="/room-assign" state={{info: info}}
-          >
-            <FaArrowAltCircleRight></FaArrowAltCircleRight>
+          <Link to = "/for-approval">
+            <FcRight size="2em"></FcRight>
           </Link>
         </td>
       </tr>
@@ -86,7 +83,7 @@ const AppliList = () => {
     <div>
       <SideMenu />
       <div className={style.table_wrapper}>
-      <h2>Applicant List</h2>
+      <h2>Cancelled Student</h2>
       <table className={style.fl_table}>
         <thead>
           <tr>
@@ -94,8 +91,7 @@ const AppliList = () => {
             <th>RegNo</th>
             <th>Department</th>
             <th>Semester</th>
-            <th>Merit</th>
-            <th></th>
+            <th>Resend</th>
           </tr>
         </thead>
         <tbody>{DisplayData}</tbody>
@@ -103,6 +99,6 @@ const AppliList = () => {
     </div>
     </div>
   );
-};
+}
 
-export default AppliList;
+export default Cancelled

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AppliList from "../application_list/appliList";
-import { useLocation } from "react-router-dom";
+import { Link, useNavigate,useLocation } from "react-router-dom";
 import style from "./roomassign.module.css";
 import SideMenu from "../../components/sidemenu/SideMenu";
 
@@ -54,7 +54,7 @@ const RoomAssign = (props) => {
       capacity: 4,
       residintNo: 2,
     },
-  ];
+  ]
 
   const getInitialState = () => {
     const value = 101;
@@ -65,33 +65,32 @@ const RoomAssign = (props) => {
   const [value, setValue] = useState(getInitialState);
   const [block, setBlock] = useState("")
   const [floor, setfloor] = useState("")
+  const [roomNo, setRoomNo] = useState("")
   const handleChange = (e) => {
     roomId = e.target.value
     setValue(roomId);
     info = roomId.split(":")
     setBlock(info[0])
     setfloor(info[1])
+    setRoomNo(info[2])
   };
 
-//   for (let x in roomDetails) {
-//       console.log(roomDetails[x])
-//  }
 
-  // const {name, reg,dept,semester,merit} = props.info
-  // console.log(props.state)
 
-  //     const { state } = useLocation()
-  // console.log(useLocation())
+
+  const { state } = useLocation()
+  const {name,regNo,dept,semester,merit} = state.info
   return (
     <div>
     <SideMenu />
       <div className={style.info_center}>
         <h2>Student Information</h2>
         <div className={style.info}>
-          <p>Name: name</p>
-          <p>Registraion No: 2018831029</p>
-          <p>Department : Software Engineering</p>
-          <p>Merit Position:810</p>
+          <p>Name: {name}</p>
+          <p>Registraion No: {regNo}</p>
+          <p>Department : {dept}</p>
+          <p> Semester : {semester}</p>
+          <p>Merit Position:{merit}</p>
           <p>Amount RecieptNo: 234567dfghj</p>
           <p>Payment Date : 12/11/22</p>
           <p>Expiration date: 12/11/23</p>
@@ -105,13 +104,14 @@ const RoomAssign = (props) => {
             ----Assigned Room----
           </option>
           {roomDetails.map((res) => (
-            <option value={res.block + ":"+res.floor +":"+ res.id}>{res.roomNo}</option>
+            <option value={res.block + ":"+res.floor +":"+ res.roomNo}>{res.roomNo}</option>
           ))}
         </select>
         
         <p>{`Block : ${block}`}</p>
         <p>{`Floor : ${floor}`}</p>
-        <p><button>Forward</button></p>
+        <p>{`Room : ${floor}`}</p>
+        <p><button><Link to="/for-approval" state={{name: name, regNo:regNo,dept:dept,semester: semester, roomNo :roomNo}}>Forward</Link></button></p>
       </div>
       </div>
     </div>

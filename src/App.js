@@ -15,7 +15,11 @@ import Footer from "./components/footer/Footer"
 import AppliList from "./pages/application_list/appliList";
 import RoomAssign from "./pages/assign_room/RoomAssign";
 import Resident from "./pages/resident/resident";
-
+import Room from "./pages/room/Room"
+import Payment from "./pages/payment/payment";
+import Approval from "./pages/approval/approval";
+import Cancelled from "./pages/cancelled/Cancelled";
+import Approved from "./pages/approved/Approved";
 function App() {
   return ( 
     <>
@@ -37,6 +41,7 @@ function App() {
           <Route path="application" element={<Application />} />
           <Route path="/issue" element={<Issue />} />
           {/* Payment page */}
+          <Route path="payment" element={<Payment />} />
 
           {/* private authority */}
           <Route path="/issue_list" element={<IssueList />} />
@@ -45,8 +50,14 @@ function App() {
           {/* room details page and edit page */}
           <Route exact path="room-assign" component={AppliList} element={<RoomAssign />} />
           <Route path="resident" element={<Resident />} />
+          <Route path="room" element={<Room />} />
+
 
           {/* private department_head */}
+          <Route path="for-approval" element={<Approval />} />
+          <Route path="cancelled" element={<Cancelled />} />
+          <Route path="approved" element={<Approved/>} />
+
           {/* application list for approve by dept head */}
         </Routes>
         <Footer />

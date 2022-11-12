@@ -1,10 +1,9 @@
-import React from "react";
-import style from "./appliList.module.css";
-import { FaArrowAltCircleRight } from "react-icons/fa";
+import React from 'react'
 import { Link, useNavigate } from "react-router-dom";
-import SideMenu from "../../components/sidemenu/SideMenu";
-
-const AppliList = () => {
+import SideMenu from '../../components/sidemenu/SideMenu';
+import { FcPlus} from "react-icons/fc";
+import style from "../application_list/appliList.module.css"
+const Approved = () => {
   const applicant = [
     {
       name: "asdfghjk",
@@ -73,10 +72,8 @@ const AppliList = () => {
         <td>{info.semester}</td>
         <td>{info.merit}</td>
         <td>
-          <Link
-             to="/room-assign" state={{info: info}}
-          >
-            <FaArrowAltCircleRight></FaArrowAltCircleRight>
+          <Link>
+            <FcPlus size="2em"></FcPlus>
           </Link>
         </td>
       </tr>
@@ -86,7 +83,7 @@ const AppliList = () => {
     <div>
       <SideMenu />
       <div className={style.table_wrapper}>
-      <h2>Applicant List</h2>
+      <h2>Approved Applicant</h2>
       <table className={style.fl_table}>
         <thead>
           <tr>
@@ -95,7 +92,7 @@ const AppliList = () => {
             <th>Department</th>
             <th>Semester</th>
             <th>Merit</th>
-            <th></th>
+            <th>Check Payment</th>
           </tr>
         </thead>
         <tbody>{DisplayData}</tbody>
@@ -105,4 +102,4 @@ const AppliList = () => {
   );
 };
 
-export default AppliList;
+export default Approved
