@@ -15,7 +15,6 @@ form {
 }
 
 .submit {
-
     width: fit-content;
     height: fit-content;
     margin: auto;
@@ -24,6 +23,7 @@ form {
     background-color: #DE840A;
     color: white;
     margin: 30px;
+    border-radius: 5px!important;
 }
 
 .submit:hover {
@@ -32,6 +32,8 @@ form {
 }
 
 .cancel {
+    border:none;
+    border-radius: 5px;
     background-color: rgb(206, 100, 81);
 }
 

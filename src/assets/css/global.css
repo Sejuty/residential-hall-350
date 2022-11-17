@@ -16,7 +16,7 @@ html {
     padding: 0;
 }
 
-button {
+/* button {
     margin: 30px;
     padding: 15px 35px;
     border-radius: 10px;
@@ -31,7 +31,7 @@ button:hover {
     transition: ease-in 0.3s;
     color: white;
     background-color: #DE840A;
-}
+} */
 
 /* nav {
     display: flex;
@@ -67,8 +67,9 @@ a:hover {
     background-size: 100% 2px;
 }
 
-a:focus,
-button:focus {
+a:focus
+/* button:focus  */
+{
     animation: bouncing 0.5s ease-in-out;
     background-image: linear-gradient(var(--accent-color), var(--accent-color));
 

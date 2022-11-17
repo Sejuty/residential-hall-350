@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./issue_list.module.css";
 import SideMenu from "../../components/sidemenu/SideMenu";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function IssueList() {
+  
   // a list of issues
   const issues = [
     {
@@ -84,9 +85,13 @@ export default function IssueList() {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
     },
   ];
+  const {state} = useLocation()
+  console.log(state)
+  const[status,setStatus] = useState("");
+
   return (
     <div className={styles.flex_container}>
-      <SideMenu />
+      {/* <SideMenu /> */}
       <h1>Issue List</h1>
       <h5>Problems faced by the students.</h5>
       <h4>Sort by: Id/room/</h4>
@@ -117,13 +122,14 @@ export default function IssueList() {
                     : styles.pending
                 }
               >
-                <Link to={
+                <Link style={{ textDecoration: 'none', color: 'black' }} 
+                to={
                     issue.status==="pending"
                     ?"/pending/create-note"
                     : issue.status === "completed"
                     ?"/completed/view-note"
                     :"/create-view-note"
-                    }>
+                    } state = {{id:issue.id, regNo:issue.regNo, date: issue.issueDate,des :issue.description, roomNo:issue.roomNo}}>
                  {issue.status}
                 </Link>
               </td>
@@ -135,3 +141,4 @@ export default function IssueList() {
     </div>
   );
 } 
+

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import style from "./Application.module.css";
-
+import CustomButton from "../../components/custom_button/CustomButton"
 import Division from "../../components/json/divisions.json";
 import District from "../../components/json/district.json"
 import Upazilla from "../../components/json/upazilla.json"
 import Union from "../../components/json/union.json"
+import { Link } from "react-router-dom";
 const Application = () => {
   const div = Division;
   const dis = District;
@@ -283,8 +284,9 @@ const Application = () => {
             placeholder="Merit Position"
           />
         </div>
-
-        <input className={style.submit} type="submit" value="Submit" />
+        
+          <Link to="/" style={{ textDecoration: 'none', color: 'white' }}><CustomButton color="green" name="Submit"></CustomButton></Link>
+        
       </form>
     </div>
   );

@@ -35,7 +35,9 @@ const AppliList = () => {
       <table className={style.fl_table}>
         <thead>
           <tr>
-            <th onClick={()=>requestSort("name")}>Name</th>
+            <th onClick={()=>requestSort("name")}>Name
+            <img src="src\assets\images\default.png" alt="" srcset="" />
+            </th>
             <th onClick={()=>requestSort("regNo")}>RegNo</th>
             <th onClick={()=>requestSort("dept")}>Department</th>
             <th onClick={()=>requestSort("semester")}>Semester</th>
