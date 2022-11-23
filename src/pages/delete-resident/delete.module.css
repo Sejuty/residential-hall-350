@@ -1,0 +1,26 @@
+.submit {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 15px 35px;
+    cursor: pointer;
+    background-color: #DE840A;
+    color: white;
+    margin: 30px;
+    border-radius: 5px!important;
+}
+
+.submit:hover {
+    background-color: rgb(57, 141, 57);
+    transition: ease-in 0.3s;
+}
+
+.cancel {
+    border:none;
+    border-radius: 5px;
+    background-color: rgb(206, 100, 81);
+}
+
+.cancel:hover {
+    background-color: rgb(238, 69, 39);
+}

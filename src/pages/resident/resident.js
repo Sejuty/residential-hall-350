@@ -1,6 +1,9 @@
 import React from 'react'
 import style from "../application_list/appliList.module.css"
 import SideMenu from '../../components/sidemenu/SideMenu';
+import { FcCancel,FcOk } from "react-icons/fc";
+import { Link, useNavigate } from "react-router-dom";
+import { CiCircleMore } from "react-icons/ci";
 
 const Resident = () => {
     const resident = [
@@ -26,7 +29,7 @@ const Resident = () => {
             <td>{info.roomNo}</td>
             <td>{info.admission_date}</td>
             <td>{info.expire_date}</td>
-            <td>{info.studentship_expiration}</td>
+            <td>{info.studentship_expiration} <Link to="/delete-resident"><CiCircleMore></CiCircleMore></Link></td>
           </tr>
         );
       });
@@ -42,9 +45,10 @@ const Resident = () => {
                 <th>RegNo</th>
                 <th>Department</th>
                 <th>RoomNo</th>
-                <th>Admission Date</th>
-                <th>Expire Date</th>
-                <th>StudentShip Expiration</th>
+                <th>Admission</th>
+                <th>Expiration</th>
+                <th>Studentship Expiration</th>
+                
               </tr>
             </thead>
             <tbody>{DisplayData}</tbody>

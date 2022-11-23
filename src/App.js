@@ -25,6 +25,7 @@ import IssueToApprove from "./pages/issue-to-approve/IssueToApprove";
 import ApprovedIssue from "./pages/approved-issue/ApprovedIssue";
 import Expense from "./pages/expense-reciept/Expense";
 import User from "./pages/user/User";
+import DeleteResident from "./pages/delete-resident/DeleteResident";
 
 function App() {
   return ( 
@@ -56,6 +57,8 @@ function App() {
           {/* room details page and edit page */}
           <Route exact path="room-assign" component={AppliList} element={<RoomAssign />} />
           <Route path="resident" element={<Resident />} />
+          <Route path="delete-resident" element={<DeleteResident />} />
+
           <Route path="room" element={<Room />} />
 
 
