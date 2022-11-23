@@ -5,7 +5,7 @@ import { UserContext } from "../../utils/userContext";
 import useUser from "../../utils/hooks/useUser";
 
 const LogIn = () => {
-
+  
   const navigate = useNavigate();
   const toHome = () => {
     navigate("/");
