@@ -5,17 +5,18 @@ import { UserContext } from "../../utils/userContext";
 import useUser from "../../utils/hooks/useUser";
 
 const LogIn = () => {
+
   const navigate = useNavigate();
   const toHome = () => {
     navigate("/");
   };
- 
-  const [platformValue, platformInputProps] = useState("Student");
 
+  const [platformValue, platformInputProps] = useState("Student");
   const [user, setUser] = useUser();
+
   return (
     <div>
-      <form className={style.container}>
+      <form className={style.container} onSubmit={() => { }} >
         <h1 className={style.h1}>Log In</h1>
         <div>
           <div>
