@@ -16,16 +16,11 @@ const LogIn = () => {
 
   const [user, setUser] = useUser();
 
-  const { register, handleSubmit } = useForm();
-  const onSubmit = data => {
-    console.log(data)
-    data.preventDefault();
 
-  };
 
   return (
     <div>
-      <form className={style.container} onSubmit={handleSubmit(onSubmit)} >
+      <form className={style.container} onSubmit={() => { }} >
         <h1 className={style.h1}>Log In</h1>
         <div>
           <div>
