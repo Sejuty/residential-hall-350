@@ -28,12 +28,12 @@ import User from "./pages/user/User";
 import DeleteResident from "./pages/delete-resident/DeleteResident";
 
 function App() {
-  return ( 
+  return (
     <>
       <UserProvider>
         <Navbar />
         <Routes>
-          
+
           {/* public */}
           <Route path="/" element={<Home />} />
           <Route path="login" element={<LogIn />} />
@@ -65,20 +65,20 @@ function App() {
           {/* private department_head */}
           <Route path="for-approval" element={<Approval />} />
           <Route path="cancelled" element={<Cancelled />} />
-          
+
 
           {/* application list for approve by dept head */}
-          <Route path="approved" element={<Approved/>} />
+          <Route path="approved" element={<Approved />} />
 
           {/*page about expenses notes and others*/}
-          <Route path="/pending/create-note" element={<CreateNote/>} />
-          <Route path="/issue-to-approve" element={<IssueToApprove/>} />
-          <Route path="/approved-issue" element={<ApprovedIssue/>} />
-          <Route path="/expense" element={<Expense/>} />
-          <Route path="/expense" element={<Expense/>} />
+          <Route path="/pending/create-note" element={<CreateNote />} />
+          <Route path="/issue-to-approve" element={<IssueToApprove />} />
+          <Route path="/approved-issue" element={<ApprovedIssue />} />
+          <Route path="/expense" element={<Expense />} />
+          <Route path="/expense" element={<Expense />} />
 
           {/* user */}
-          <Route path="/user" element={<User/>} />
+          <Route path="/user" element={<User />} />
 
         </Routes>
         <Footer />

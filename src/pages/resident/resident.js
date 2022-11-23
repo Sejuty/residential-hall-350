@@ -9,32 +9,41 @@ import Axios from "axios";
 const Resident = () => {
   const [users, setUsers] = useState([]);
 
-  try {
-    const getResidents = async () => {
-      const res = await Axios.get(
+
+  const getResidents = async () => {
+    try {
+      const res = await Axios.post(
         "http://localhost:1111/api/v1/authority/resident/getAllResidentsInfo",
+
         {
+
           start: 1,
           offset: 10,
-          sort_by:"Merit_position",
+          sort_by: "Merit_position",
+
+        }, {
+        headers: {
+
+          'Authorization': `Bearer ${localStorage.getItem("access_token")}`,
         },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-          },
-        }
+
+      }
       );
       const data = await res.data;
       console.log(data.data);
       setUsers(data.data);
-    };
+    } catch (err) {
+      console.log(err);
+    }
 
-    useEffect(() => {
-      getResidents();
-    }, []);
-  } catch (err) {
-    console.log(err);
   }
+
+
+
+
+  useEffect(() => {
+    getResidents();
+  }, []);
 
 
   const DisplayData = users.map((info) => {
