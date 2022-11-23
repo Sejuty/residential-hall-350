@@ -84,15 +84,15 @@ const Application = () => {
         <div className={style.perm_add}>
           {" "}
           <div>
-            <label htmlFor="fname">First Name</label>
+            <label htmlFor="fname">Full Name</label>
             <input
               type="text"
               id="fname"
-              name="firstname"
-              placeholder="First Name"
+              name="Name"
+              placeholder="Name"
             />
           </div>
-          <div>
+          {/* <div>
             <label htmlFor="lname">Last Name</label>
             <input
               type="text"
@@ -100,7 +100,7 @@ const Application = () => {
               name="lastname"
               placeholder="Last name"
             />
-          </div>
+          </div> */}
         </div>
         <div className={style.perm_add}>
           <div>
@@ -108,7 +108,7 @@ const Application = () => {
             <input
               type="text"
               id="fathers_name"
-              name="fathersname"
+              name="Father_name"
               placeholder="Father's Name"
             />
           </div>
@@ -117,7 +117,7 @@ const Application = () => {
             <input
               type="text"
               id="mothers_name"
-              name="mothersname"
+              name="Mother_name"
               placeholder="Mother's Name"
             />
           </div>
@@ -129,7 +129,7 @@ const Application = () => {
             <input
               type="text"
               id="phone_no"
-              name="phone_no"
+              name="PhoneNo"
               placeholder="Phone no"
             />
           </div>
@@ -255,53 +255,120 @@ const Application = () => {
 
         <div>
           <label htmlFor="department">Department</label>
-          <select id="department" name="department">
+          <select id="department" name="Department">
             <option value="department1">SWE</option>
             <option value="department2">PME</option>
             <option value="department3">GEB</option>
+            <option value="department4">CSE</option>
+            <option value="department5">EEE</option>
+            <option value="department6">CEE</option>
+            <option value="department7">MEE</option>
+            <option value="department8">IPE</option>
+            <option value="department9">CEP</option>
+            <option value="department10">BMB</option>
+            <option value="department11">PME</option>
+            <option value="department12">FET</option>
+            <option value="department13">ARC</option>
+            <option value="department14">CHE</option>
+            <option value="department15">PHY</option>
+            <option value="department16">MAT</option>
+            <option value="department17">GEB</option>
+            <option value="department18">FES</option>
+            <option value="department19">OCG</option>
+            <option value="department20">ENG</option>
+            <option value="department21">BNG</option>
+            <option value="department22">ECO</option>
+            <option value="department23">BBA</option>
+            <option value="department24">STA</option>
+            <option value="department25">PAD</option>
+            <option value="department26">ANP</option>
+            <option value="department27">SSC</option>
+            <option value="department28">SCO</option>
           </select>
         </div>
         <div>
           <label htmlFor="year">Year</label>
-          <select id="year" name="year">
-            <option value="year1">2018-19</option>
-            <option value="year2">2019-20</option>
-            <option value="year3">2020-2021</option>
+          <select id="year" name="Session">
+            <option value="year1">2012-13</option>
+            <option value="year2">2013-14</option>
+            <option value="year3">2014-15</option>
+            <option value="year4">2015-16</option>
+            <option value="year5">2016-17</option>
+            <option value="year6">2017-18</option>
+            <option value="year7">2018-19</option>
+            <option value="year8">2019-20</option>
+            <option value="year9">2020-21</option>
+            <option value="year10">2021-22</option>
+            <option value="year11">2022-23</option>
+            <option value="year12">2023-24</option>
+            <option value="year13">2024-25</option>
           </select>
         </div>
         <div>
           <label htmlFor="reg">Registration No</label>
-          <input type="text" id="reg" name="reg" placeholder="Reg.No" />
+          <input type="text" id="reg" name="RegNo" placeholder="Reg.No" />
         </div>
         <h3>Last Result</h3>
         <div className={style.perm_add}>
           <div>
             <label htmlFor="exam">Exam Name</label>
-            <select id="exam" name="exam">
-              <option value="exam1">exam1</option>
-              <option value="exam2">exam2</option>
-              <option value="exam3">exam3</option>
+            <select id="exam" name="Last_result">
+              <option value="exam1">1-1</option>
+              <option value="exam2">1-2</option>
+              <option value="exam3">2-1</option>
+              <option value="exam4">2-2</option>
+              <option value="exam5">3-1</option>
+              <option value="exam6">3-2</option>
+              <option value="exam7">4-1</option>
+              <option value="exam8">4-2</option>
+              <option value="exam9">5-1</option>
+              <option value="exam10">5-2</option>
+              <option value="exam11">M-1</option>
+              <option value="exam12">M-2</option>
+              <option value="exam13">M-3</option>
+              <option value="exam14">M-4</option>
             </select>
           </div>
           <div>
             <label htmlFor="year">Passing Year</label>
             <select id="year" name="year">
-              <option value="year1">2018-19</option>
-              <option value="year2">2019-20</option>
-              <option value="year3">2020-2021</option>
+            <option value="year1">2014-15</option>
+            <option value="year2">2015-16</option>
+            <option value="year3">2016-17</option>
+            <option value="year4">2017-18</option>
+            <option value="year5">2018-19</option>
+            <option value="year6">2019-20</option>
+            <option value="year7">2020-21</option>
+            <option value="year8">2021-22</option>
+            <option value="year9">2022-23</option>
+            <option value="year10">2023-24</option>
+            <option value="year11">2024-25</option>
+            <option value="year12">2025-26</option>
+            <option value="year13">2026-27</option>
             </select>
           </div>
           <div>
             <label htmlFor="semester">Semester</label>
-            <select id="semester" name="semester">
-              <option value="semester">1st</option>
-              <option value="semester">2nd</option>
-              <option value="semester">3rd</option>
+            <select id="semester" name="Semester">
+            <option value="exam1">1-1</option>
+              <option value="exam2">1-2</option>
+              <option value="exam3">2-1</option>
+              <option value="exam4">2-2</option>
+              <option value="exam5">3-1</option>
+              <option value="exam6">3-2</option>
+              <option value="exam7">4-1</option>
+              <option value="exam8">4-2</option>
+              <option value="exam9">5-1</option>
+              <option value="exam10">5-2</option>
+              <option value="exam11">M-1</option>
+              <option value="exam12">M-2</option>
+              <option value="exam13">M-3</option>
+              <option value="exam14">M-4</option>
             </select>
           </div>
           <div>
             <label htmlFor="cgpa">CGPA</label>
-            <input type="text" id="cgpa" name="cgpa" placeholder="CGPA" />
+            <input type="text" id="cgpa" name="Last_result" placeholder="CGPA" />
           </div>
         </div>
         <div>
@@ -309,7 +376,7 @@ const Application = () => {
           <input
             type="text"
             id="merit"
-            name="merit"
+            name="Merit_position"
             placeholder="Merit Position"
           />
         </div>

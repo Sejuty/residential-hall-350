@@ -12,7 +12,13 @@ const StudentReg = () => {
   return (
     <div>
       <RegNavBar/>
-      <form className={style.container}>
+      <form className={style.container} onSubmit={(event)=>{
+        // console.log(event);
+         console.log(event.target.name.value)
+   event.preventDefault();
+
+        
+      }}>
         <h1 className={style.h1}>As Student</h1>
         <div>
           <div>
