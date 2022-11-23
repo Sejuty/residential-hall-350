@@ -50,14 +50,14 @@ const Resident = () => {
     console.log(info);
     return (
       <tr>
-        <td>{info.name}</td>
-        <td>{info.regNo}</td>
-        <td>{info.dept}</td>
-        <td>{info.roomNo}</td>
-        <td>{info.admission_date}</td>
-        <td>{info.expire_date}</td>
+        <td>{info.Name}</td>
+        <td>{info.RegNo}</td>
+        <td>{info.Department}</td>
+        <td>{info.RoomNo}</td>
+        <td>{info.Admission_date}</td>
+        <td>{info.Expire_date}</td>
         <td>
-          {info.studentship_expiration}{" "}
+          {info.Studentship_expiration}{" "}
           <Link to="/delete-resident">
             <CiCircleMore></CiCircleMore>
           </Link>
@@ -68,8 +68,8 @@ const Resident = () => {
   return (
     <div>
       <SideMenu />
-      <div className={style.table_wrapper}>
-        <h2>Resident List</h2>
+      <div style={{boxShadow: "none"}} className={style.table_wrapper}>
+        <h2 style={{marginLeft: "400px"}}>Resident List</h2>
         <table className={style.fl_table}>
           <thead>
             <tr>
