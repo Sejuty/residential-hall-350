@@ -331,7 +331,7 @@ const Application = () => {
               <option value="exam14">M-4</option>
             </select>
           </div>
-          <div>
+          {/* <div>
             <label htmlFor="year">Passing Year</label>
             <select id="year" name="year">
               <option value="year1">2014-15</option>
@@ -348,7 +348,7 @@ const Application = () => {
               <option value="year12">2025-26</option>
               <option value="year13">2026-27</option>
             </select>
-          </div>
+          </div>  */}
           <div>
             <label htmlFor="semester">Semester</label>
             <select id="semester" name="Semester">
