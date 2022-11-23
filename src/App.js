@@ -24,6 +24,7 @@ import CreateNote from "./pages/notes/CreateNote";
 import IssueToApprove from "./pages/issue-to-approve/IssueToApprove";
 import ApprovedIssue from "./pages/approved-issue/ApprovedIssue";
 import Expense from "./pages/expense-reciept/Expense";
+import User from "./pages/user/User";
 
 function App() {
   return ( 
@@ -71,6 +72,11 @@ function App() {
           <Route path="/issue-to-approve" element={<IssueToApprove/>} />
           <Route path="/approved-issue" element={<ApprovedIssue/>} />
           <Route path="/expense" element={<Expense/>} />
+          <Route path="/expense" element={<Expense/>} />
+
+          {/* user */}
+          <Route path="/user" element={<User/>} />
+
         </Routes>
         <Footer />
       </UserProvider>

@@ -12,9 +12,13 @@ const SideMenu = () => {
                 <p>Provost</p>
             </div> */}
           <ul>
+          <li>
+              <Link to="/user"><span className={style.item}>User</span></Link>
+            </li>
             <li>
               <Link to="/application-list"><span className={style.item}>Applicant</span></Link>
             </li>
+          
             <li>
               <Link to="/resident"><span className={style.item}>Residents</span></Link>
             </li>
