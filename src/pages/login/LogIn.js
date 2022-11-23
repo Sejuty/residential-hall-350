@@ -3,12 +3,24 @@ import style from "./LogIn.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../utils/userContext";
 import useUser from "../../utils/hooks/useUser";
+import validator from 'validator'
 
 const LogIn = () => {
+  
   const navigate = useNavigate();
   const toHome = () => {
     navigate("/");
   };
+  const [emailError, setEmailError] = useState('')
+  const validateEmail = (e) => {
+    var email = e.target.value
+  
+    if (!email) {
+      setEmailError('Valid Email :)')
+    } else {
+      setEmailError('Enter valid Email!')
+    }
+  }
  
   const [platformValue, platformInputProps] = useState("Student");
 
@@ -20,12 +32,8 @@ const LogIn = () => {
         <div>
           <div>
             <label htmlFor="email">Email</label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="@sust.edu"
-            />
+            <input type="text" id="userEmail" required
+        onChange={(e) => validateEmail(e)}></input>
           </div>
         </div>
         <div>
@@ -70,7 +78,6 @@ const LogIn = () => {
 
             setUser(platformValue);
 
-            toHome();
 
           }} />
         </div>

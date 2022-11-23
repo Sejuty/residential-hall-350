@@ -8,8 +8,8 @@ const SideMenu = () => {
         <div className={style.sidebar}>
         {/* <div className={style.profile}>
                 <img src="https://www.finevector.com/2019/10/shahjalal-university-of-science.html" alt="profile_picture"/>
-                <h3>Anamika Roy</h3>
-                <p>Designer</p>
+                <h3>mr. AWP</h3>
+                <p>Provost</p>
             </div> */}
           <ul>
           <li>
@@ -22,6 +22,9 @@ const SideMenu = () => {
             <Link to="/room"><span className={style.item}>Room Details</span></Link>
             </li>
             <li>
+            <Link to="/for-approval"><span className={style.item}>Student To Approve</span></Link>
+            </li>
+            <li>
               <Link to="/payment"><span className={style.item}>Payment Details</span></Link>
             </li>
             <li>
@@ -32,6 +35,12 @@ const SideMenu = () => {
             </li>
             <li>
             <Link to="/issue_list"><span className={style.item}>Currents Issues</span></Link>
+            </li>
+            <li>
+            <Link to="/issue-to-approve"><span className={style.item}>Issue to Approve</span></Link>
+            </li>
+            <li>
+            <Link to="/approved-issue"><span className={style.item}>Approved Issue</span></Link>
             </li>
           </ul>
         </div>
