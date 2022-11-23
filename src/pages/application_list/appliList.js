@@ -1,13 +1,18 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import style from "./appliList.module.css";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import Applicant from "../../components/json/applicant.json"
 import SideMenu from "../../components/sidemenu/SideMenu";
 import useSortableData from "../../components/sortTable/useSortableData";
+import Axios from "axios";
 const AppliList = () => {
   const applicant = Applicant
   const { items, requestSort } = useSortableData(applicant);
+
+  
+
+ 
 
   const DisplayData = items.map((info) => {
     return (
