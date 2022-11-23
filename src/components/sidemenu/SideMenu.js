@@ -6,20 +6,20 @@ const SideMenu = () => {
     <div>
       <div className={style.wrapper}>
         <div className={style.sidebar}>
-        {/* <div className={style.profile}>
+          {/* <div className={style.profile}>
                 <img src="https://www.finevector.com/2019/10/shahjalal-university-of-science.html" alt="profile_picture"/>
                 <h3>Anamika Roy</h3>
                 <p>Designer</p>
             </div> */}
           <ul>
-          <li>
+            <li>
               <Link to="/application-list"><span className={style.item}>Applicant</span></Link>
             </li>
             <li>
               <Link to="/resident"><span className={style.item}>Residents</span></Link>
             </li>
             <li>
-            <Link to="/room"><span className={style.item}>Room Details</span></Link>
+              <Link to="/room"><span className={style.item}>Room Details</span></Link>
             </li>
             <li>
               <Link to="/payment"><span className={style.item}>Payment Details</span></Link>
@@ -31,7 +31,7 @@ const SideMenu = () => {
               <Link to="/cancelled"><span className={style.item}>Cancelled Student</span></Link>
             </li>
             <li>
-            <Link to="/issue_list"><span className={style.item}>Currents Issues</span></Link>
+              <Link to="/issue_list"><span className={style.item}>Currents Issues</span></Link>
             </li>
           </ul>
         </div>
