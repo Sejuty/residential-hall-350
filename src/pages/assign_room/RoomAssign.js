@@ -82,7 +82,7 @@ const RoomAssign = (props) => {
           <p>{`Floor : ${floor}`}</p>
          </div>
           <p>
-            <BlueButton name="Create Note">
+           
               <Link
                 to="/for-approval"
                 state={{
@@ -93,9 +93,9 @@ const RoomAssign = (props) => {
                   roomNo: roomNo,
                 }}
               >
-                Forward
+                 <BlueButton name="Forward"></BlueButton>
               </Link>
-            </BlueButton>
+            
           </p>
         </div>
       </div>
