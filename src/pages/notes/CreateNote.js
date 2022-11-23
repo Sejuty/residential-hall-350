@@ -36,8 +36,8 @@ const CreateNote = () => {
           <p>Description:fvgbhjk</p>
         </div>
         <form>
-          <label for="w_amnt">Withdrawal Amount</label>
-          <input type="number" id="w_amnt" name="w_amnt" />
+          <label for="e_amnt">Estimated Amount</label>
+          <input type="number" id="e_amnt" name="e_amnt" />
           <label for="b_recpt">Bank Reciept NO</label>
           <input type="text" id="b_recpt" name="b_recpt" />
           <label for="date">Note Date</label>
@@ -96,7 +96,7 @@ const CreateNote = () => {
         <p>
          
             <Link to="/issue_list" state={{buttonName :"working"}}>
-            <CustomButton name="Create Note" color="brown"></CustomButton>
+            <CustomButton name="Forward to Provost" color="brown"></CustomButton>
             </Link>
         
         </p>

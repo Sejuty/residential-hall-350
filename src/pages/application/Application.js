@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import style from "./Application.module.css";
-import CustomButton from "../../components/custom_button/CustomButton"
+import CustomButton from "../../components/custom_button/CustomButton";
 import Division from "../../components/json/divisions.json";
-import District from "../../components/json/district.json"
-import Upazilla from "../../components/json/upazilla.json"
-import Union from "../../components/json/union.json"
+import District from "../../components/json/district.json";
+import Upazilla from "../../components/json/upazilla.json";
+import Union from "../../components/json/union.json";
 import { Link } from "react-router-dom";
 const Application = () => {
   const div = Division;
   const dis = District;
   const up = Upazilla;
-  const uni= Union;
-  let id = null;
-  let disId = null;
+  const uni = Union;
+
+  let permanent_address = "";
+
   const [division, setDivision] = useState("");
   const [district, setDistrict] = useState("");
   const [upazilla, setUpazilla] = useState("");
@@ -21,8 +22,11 @@ const Application = () => {
   const [district1, setDistrict1] = useState("");
   const [upazilla1, setUpazilla1] = useState("");
   const [union1, setUnion1] = useState("");
+
+  
+
   const handleDivision = (e) => {
-    setDivision( e.target.value)
+    setDivision(e.target.value);
   };
   const handleDistrict = (e) => {
     setDistrict(e.target.value);
@@ -30,12 +34,12 @@ const Application = () => {
   const handleUpazilla = (e) => {
     setUpazilla(e.target.value);
   };
-  const handleUnion= (e) => {
+  const handleUnion = (e) => {
     setUnion(e.target.value);
   };
 
   const handleDivision1 = (e) => {
-    setDivision1( e.target.value)
+    setDivision1(e.target.value);
   };
   const handleDistrict1 = (e) => {
     setDistrict1(e.target.value);
@@ -43,10 +47,35 @@ const Application = () => {
   const handleUpazilla1 = (e) => {
     setUpazilla1(e.target.value);
   };
-  const handleUnion1= (e) => {
+  const handleUnion1 = (e) => {
     setUnion1(e.target.value);
   };
-  
+
+  // for (var i = 0; i < uni.length; i++) {
+  //   if (i.id === union) {
+  //     console.log("hiiiii")
+  //     permanent_address = permanent_address + i.name;
+  //     break;
+  //   }
+  // }
+  // for (var j = 0; j < up.length; j++) {
+  //   if (j.id === upazilla) {
+  //     console.log("nishat");
+  //     permanent_address = permanent_address + j.name;
+  //   }
+  // }
+  // for (var k = 0; k < dis.length; k++) {
+  //   if (k.id === district) {
+  //     permanent_address = permanent_address + k.name;
+  //   }
+  // }
+  // for (var l = 0; l < div.length; l++) {
+  //   if (l.id === division) {
+  //     permanent_address = permanent_address + l.name;
+  //   }
+  // }
+
+  console.log(union+ upazilla+ district+ division);
 
   return (
     <div>
@@ -117,7 +146,7 @@ const Application = () => {
         <h3>Permanent Address</h3>
         <div className={style.perm_add}>
           <div>
-          <label htmlFor="division">Division</label>
+            <label htmlFor="division">Division</label>
             <select value={division} onChange={handleDivision}>
               <option selected disabled="true">
                 ----Division----
@@ -129,7 +158,7 @@ const Application = () => {
           </div>
 
           <div>
-          <label htmlFor="district">District</label>
+            <label htmlFor="district">District</label>
             <select value={district} onChange={handleDistrict}>
               <option selected disabled="true">
                 ----District----
@@ -142,8 +171,8 @@ const Application = () => {
             </select>
           </div>
           <div>
-          <label htmlFor="upazilla">Upazilla</label>
-          <select value={upazilla} onChange={handleUpazilla}>
+            <label htmlFor="upazilla">Upazilla</label>
+            <select value={upazilla} onChange={handleUpazilla}>
               <option selected disabled="true">
                 ----Upazilla----
               </option>
@@ -155,8 +184,8 @@ const Application = () => {
             </select>
           </div>
           <div>
-          <label htmlFor="union">Union</label>
-          <select value={union} onChange={handleUnion}>
+            <label htmlFor="union">Union</label>
+            <select value={union} onChange={handleUnion}>
               <option selected disabled="true">
                 ----Union----
               </option>
@@ -172,7 +201,7 @@ const Application = () => {
         <h3>Present Address</h3>
         <div className={style.perm_add}>
           <div>
-          <label htmlFor="division">Division</label>
+            <label htmlFor="division">Division</label>
             <select value={division1} onChange={handleDivision1}>
               <option selected disabled="true">
                 ----Division----
@@ -184,7 +213,7 @@ const Application = () => {
           </div>
 
           <div>
-          <label htmlFor="district">District</label>
+            <label htmlFor="district">District</label>
             <select value={district1} onChange={handleDistrict1}>
               <option selected disabled="true">
                 ----District----
@@ -197,8 +226,8 @@ const Application = () => {
             </select>
           </div>
           <div>
-          <label htmlFor="upazilla">Upazilla</label>
-          <select value={upazilla1} onChange={handleUpazilla1}>
+            <label htmlFor="upazilla">Upazilla</label>
+            <select value={upazilla1} onChange={handleUpazilla1}>
               <option selected disabled="true">
                 ----Upazilla----
               </option>
@@ -210,8 +239,8 @@ const Application = () => {
             </select>
           </div>
           <div>
-          <label htmlFor="union">Union</label>
-          <select value={union1} onChange={handleUnion1}>
+            <label htmlFor="union">Union</label>
+            <select value={union1} onChange={handleUnion1}>
               <option selected disabled="true">
                 ----Union----
               </option>
@@ -351,9 +380,10 @@ const Application = () => {
             placeholder="Merit Position"
           />
         </div>
-        
-          <Link to="/" style={{ textDecoration: 'none', color: 'white' }}><CustomButton color="green" name="Submit"></CustomButton></Link>
-        
+
+        <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <CustomButton color="green" name="Submit"></CustomButton>
+        </Link>
       </form>
     </div>
   );

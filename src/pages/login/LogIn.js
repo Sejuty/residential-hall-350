@@ -3,9 +3,10 @@ import style from "./LogIn.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../utils/userContext";
 import useUser from "../../utils/hooks/useUser";
-import { useForm } from "react-hook-form";
+import validator from 'validator'
 
 const LogIn = () => {
+
   const navigate = useNavigate();
   const toHome = () => {
     navigate("/");
@@ -30,13 +31,10 @@ const LogIn = () => {
           <div>
             <label htmlFor="email">Email</label>
             <input
-              type="email"
+              type="text"
               id="email"
               name="email"
               placeholder="@sust.edu"
-              {...register("lastName", { pattern: /^[A-Za-z]+$/i })}
-
-              required
             />
           </div>
         </div>
@@ -73,7 +71,18 @@ const LogIn = () => {
         </div >
         <div className={style.btns}>
           <button onClick={toHome} className={`${style.submit} ${style.cancel} `}>Cancel</button>
-          <input type="submit" className={style.submit} />
+          <input type="submit" className={style.submit} onClick={(e) => {
+            e.preventDefault();
+
+            console.dir(e.target);
+            console.log(platformValue);
+            localStorage.setItem("user", platformValue);
+
+            setUser(platformValue);
+
+            toHome();
+
+          }} />
         </div>
         <p style={{ fontSize: "20px" }}>Don't have an account?<Link to="/registration">Register</Link></p>
       </form >
