@@ -26,7 +26,7 @@ const RoomAssign = (props) => {
   };
 
   const { state } = useLocation();
-  const { name, regNo, dept, semester, merit } = state.info;
+  const { Name, regNo, dept, semester, merit } = state.info;
   return (
     <div>
       {/* <SideMenu /> */}
@@ -39,23 +39,37 @@ const RoomAssign = (props) => {
             <div className={style.label}>
               <div>Name</div>
               <div>Reg No</div>
+              <div>PhoneNo</div>
+              <div>Father's Name</div>
+              <div>Mother's Name</div>
+              <div>Permanent Address</div>
+              <div>Present Address</div>
               <div>Department</div>
               <div>Semester</div>
-              <div>Merrit Position</div>
-              <div>Amount Reciept No.</div>
-              <div>Payment Date</div>
-              <div>Expiration Date</div>
+              <div>Session</div>
+              
+              <div>Last Result</div>
+              <div>Merit_position</div>
+            
+              <div>Application_date</div>
+              <div>Addmission_year</div>
             </div>
 
             <div className={style.rel_info}>
-              <div>{name}</div>
-              <div>{regNo}</div>
-              <div>{dept}</div>
-              <div>{semester}</div>
-              <div>{merit}</div>
-              <div>567fghjk</div>
-              <div>12/12/21</div>
-              <div>12/12/22</div>
+              <div>Name</div>
+              <div>RegNo</div>
+              <div>PhoneNo</div>
+              <div>Father_name</div>
+              <div>Mother_name</div>
+              <div>Permanent_address</div>
+              <div>Present_address</div>
+              <div>Department</div>
+              <div>Semester</div>
+              <div>Session</div>
+              <div>Last_result</div>
+              <div>Merit_position</div>
+              <div>Application_date</div>
+              <div>Addmission_year</div>
             </div>
           </div>
         </div>
@@ -86,7 +100,7 @@ const RoomAssign = (props) => {
               <Link
                 to="/for-approval"
                 state={{
-                  name: name,
+                  name: Name,
                   regNo: regNo,
                   dept: dept,
                   semester: semester,

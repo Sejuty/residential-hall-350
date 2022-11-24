@@ -71,7 +71,7 @@ const Approval = () => {
             <td>{info.name}</td>
             <td>{info.regNo}</td>
             <td>{info.dept}</td>
-            <td>{info.semester}  <Link><CiCircleMore></CiCircleMore></Link></td>
+            <td>{info.semester}  <Link to="/approval-detail"><CiCircleMore ></CiCircleMore></Link></td>
             <td>
             <Link><FcOk size = "2em"></FcOk></Link>
             </td>

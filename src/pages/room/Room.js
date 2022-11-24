@@ -50,11 +50,11 @@ const Room = () => {
         <table className={style.fl_table}>
           <thead>
             <tr>
-              <th onClick={() => requestSort("roomNo")}>Room NO</th>
-              <th onClick={() => requestSort("block")}>Block</th>
-              <th onClick={() => requestSort("floor")}>Floor</th>
-              <th onClick={() => requestSort("capacity")}>Capacity</th>
-              <th onClick={() => requestSort("residintNo")}>Resident Number</th>
+              <th onClick={() => requestSort("RoomNo")}>Room NO</th>
+              <th onClick={() => requestSort("Block")}>Block</th>
+              <th onClick={() => requestSort("Floor")}>Floor</th>
+              <th onClick={() => requestSort("Capacity")}>Capacity</th>
+              <th onClick={() => requestSort("Resident_number")}>Resident Number</th>
             </tr>
           </thead>
           <tbody>{DisplayData}</tbody>

@@ -26,6 +26,7 @@ import ApprovedIssue from "./pages/approved-issue/ApprovedIssue";
 import Expense from "./pages/expense-reciept/Expense";
 import User from "./pages/user/User";
 import DeleteResident from "./pages/delete-resident/DeleteResident";
+import ApprovalDetails from "./pages/approval/ApprovalDetails";
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
 
           {/* private department_head */}
           <Route path="for-approval" element={<Approval />} />
+          <Route path="approval-detail" element={<ApprovalDetails />} />
           <Route path="cancelled" element={<Cancelled />} />
 
 
