@@ -26,14 +26,26 @@ const CreateNote = () => {
   const handleCalendarOpen = () => console.log("Calendar opened");
 
   return (
-    <div>
-      <div className={style.info_center}>
-        <h2>Student Information</h2>
+   <div>
+     <div className={style.header}>
+    <h2>Create Note</h2>
+  </div>
+    <div className={style.info_center}>
         <div className={style.info}>
-          <p>Issue Date:678</p>
-          <p>Room no: esdxfghj</p>
-          <p>Issued By: rtyui</p>
-          <p>Description:fvgbhjk</p>
+          <div class={style.container}>
+            <div className={style.label}>
+              <div>Issue date</div>
+              <div>Room No</div>
+              <div>Issued By</div>
+              <div>Description</div>
+            </div>
+            <div className={style.rel_info}>
+              <div>12.11.22</div>
+              <div>101</div>
+              <div>2018834567</div>
+              <div>The fridge is broken</div>
+            </div>
+          </div>
         </div>
         <form>
           <label for="e_amnt">Estimated Amount</label>
@@ -101,7 +113,7 @@ const CreateNote = () => {
         
         </p>
       </div>
-    </div>
+   </div>
   );
 };
 
